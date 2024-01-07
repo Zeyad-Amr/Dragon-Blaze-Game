@@ -46,4 +46,31 @@ public class Utils : MonoBehaviour
         }
 
     }
+
+    public static void MoveHorizontalLoop(Transform tr, float speed, bool isLeft = false)
+    {
+
+        if (isLeft)
+        {
+            if (tr.position.x > -xDimesion - 3)
+            {
+                tr.position += new Vector3(-speed, 0, 0);
+            }
+            else
+            {
+                tr.position = new Vector3(xDimesion + 3, tr.position.y, tr.position.z);
+            }
+        }
+        else
+        {
+            if (tr.position.x < xDimesion + 3)
+            {
+                tr.position += new Vector3(speed, 0, 0);
+            }
+            else
+            {
+                tr.position = new Vector3(-xDimesion - 3, tr.position.y, tr.position.z);
+            }
+        }
+    }
 }
