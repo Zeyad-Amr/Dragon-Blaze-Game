@@ -19,19 +19,19 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Utils.IsKeyPressed(KeyCode.RightArrow))
         {
-            Utils.moveRight(transform, speed);
+            Utils.MoveRight(transform, speed);
         }
         if (Utils.IsKeyPressed(KeyCode.LeftArrow))
         {
-            Utils.moveLeft(transform, speed);
+            Utils.MoveLeft(transform, speed);
         }
         if (Utils.IsKeyPressed(KeyCode.UpArrow))
         {
-            Utils.moveUp(transform, speed);
+            Utils.MoveUp(transform, speed);
         }
         if (Utils.IsKeyPressed(KeyCode.DownArrow))
         {
-            Utils.moveDown(transform, speed);
+            Utils.MoveDown(transform, speed);
         }
     }
 }

@@ -13,7 +13,7 @@ public class Utils : MonoBehaviour
         return Input.GetKey(key);
     }
 
-    public static void moveLeft(Transform tr, float speed)
+    public static void MoveLeft(Transform tr, float speed)
     {
         if (tr.position.x > -xDimesion)
         {
@@ -22,7 +22,7 @@ public class Utils : MonoBehaviour
 
     }
 
-    public static void moveRight(Transform tr, float speed)
+    public static void MoveRight(Transform tr, float speed)
     {
         if (tr.position.x < xDimesion)
         {
@@ -30,7 +30,7 @@ public class Utils : MonoBehaviour
         }
     }
 
-    public static void moveUp(Transform tr, float speed)
+    public static void MoveUp(Transform tr, float speed)
     {
         if (tr.position.y < yDimesion)
         {
@@ -38,7 +38,7 @@ public class Utils : MonoBehaviour
         }
     }
 
-    public static void moveDown(Transform tr, float speed)
+    public static void MoveDown(Transform tr, float speed)
     {
         if (tr.position.y > -yDimesion)
         {
