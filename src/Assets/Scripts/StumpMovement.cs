@@ -9,6 +9,6 @@ public class StumpMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Utils.MoveHorizontalLoop(transform, speed, true);
+        Utils.MoveHorizontalLoop(transform, speed, 3, true);
     }
 }

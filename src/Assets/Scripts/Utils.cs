@@ -8,6 +8,7 @@ public class Utils : MonoBehaviour
     public static float xDimesion = 9.26f;
     public static float yDimesion = 3.53f;
 
+
     public static bool IsKeyPressed(KeyCode key)
     {
         return Input.GetKey(key);
@@ -47,29 +48,29 @@ public class Utils : MonoBehaviour
 
     }
 
-    public static void MoveHorizontalLoop(Transform tr, float speed, bool isLeft = false)
+    public static void MoveHorizontalLoop(Transform tr, float speed, float outRange, bool isLeft = false)
     {
 
         if (isLeft)
         {
-            if (tr.position.x > -xDimesion - 3)
+            if (tr.position.x > -xDimesion - outRange)
             {
                 tr.position += new Vector3(-speed, 0, 0);
             }
             else
             {
-                tr.position = new Vector3(xDimesion + 3, tr.position.y, tr.position.z);
+                tr.position = new Vector3(xDimesion + outRange, tr.position.y, tr.position.z);
             }
         }
         else
         {
-            if (tr.position.x < xDimesion + 3)
+            if (tr.position.x < xDimesion + outRange)
             {
                 tr.position += new Vector3(speed, 0, 0);
             }
             else
             {
-                tr.position = new Vector3(-xDimesion - 3, tr.position.y, tr.position.z);
+                tr.position = new Vector3(-xDimesion - outRange, tr.position.y, tr.position.z);
             }
         }
     }
