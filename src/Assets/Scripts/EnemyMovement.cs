@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class EnemyMovement : MonoBehaviour
 {
     // This is the speed of the player
-    public float speed = 0.01f;
+    public float speed = 0.1f;
     // Start is called before the first frame update
     void Start()
     {

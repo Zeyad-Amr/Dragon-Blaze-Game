@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     // This is the speed of the player
-    public float speed = 0.02f;
+    public float speed = 0.1f;
     public Vector3 objectSize;
     // Start is called before the first frame update
     void Start()
@@ -40,12 +40,13 @@ public class PlayerMovement : MonoBehaviour
         if (Utils.IsKeyPressed(KeyCode.RightArrow))
         {
             Utils.MoveRight(transform, speed, -objectSize.x / 2);
-            transform.localScale = new Vector3(1, 1, 1);
+            Utils.flipX(transform, false);
         }
         if (Utils.IsKeyPressed(KeyCode.LeftArrow))
         {
             Utils.MoveLeft(transform, speed, -objectSize.x / 2);
-            transform.localScale = new Vector3(-1, 1, 1);
+            Utils.flipX(transform, true);
+
         }
         if (Utils.IsKeyPressed(KeyCode.UpArrow))
         {

@@ -78,4 +78,16 @@ public class Utils : MonoBehaviour
             }
         }
     }
+
+    public static void flipX(Transform tr, bool isLeft = false)
+    {
+        if (isLeft)
+        {
+            tr.localScale = new Vector3(-Mathf.Abs(tr.localScale.x), tr.localScale.y, tr.localScale.z);
+        }
+        else
+        {
+            tr.localScale = new Vector3(Mathf.Abs(tr.localScale.x), tr.localScale.y, tr.localScale.z);
+        }
+    }
 }
