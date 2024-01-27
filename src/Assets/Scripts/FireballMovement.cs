@@ -24,7 +24,6 @@ public class FireballMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             Destroy(gameObject);
-            Scoring.AddScore(1);
         }
     }
 
