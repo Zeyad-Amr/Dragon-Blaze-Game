@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -79,7 +80,33 @@ public class Utils : MonoBehaviour
         }
     }
 
-    public static void flipX(Transform tr, bool isLeft = false)
+    public static void MoveVerticalLoop(Transform tr, float speed, float outRange, bool isDown = false)
+    {
+        if (isDown)
+        {
+            if (tr.position.y > -yDimesion - outRange)
+            {
+                tr.position += new Vector3(0, -speed, 0);
+            }
+            else
+            {
+                tr.position = new Vector3(tr.position.x, yDimesion + outRange, tr.position.z);
+            }
+        }
+        else
+        {
+            if (tr.position.y < yDimesion + outRange)
+            {
+                tr.position += new Vector3(0, speed, 0);
+            }
+            else
+            {
+                tr.position = new Vector3(tr.position.x, -yDimesion - outRange, tr.position.z);
+            }
+        }
+    }
+
+    public static void FlipX(Transform tr, bool isLeft = false)
     {
         if (isLeft)
         {
@@ -88,6 +115,18 @@ public class Utils : MonoBehaviour
         else
         {
             tr.localScale = new Vector3(Mathf.Abs(tr.localScale.x), tr.localScale.y, tr.localScale.z);
+        }
+    }
+
+    public static void FlipY(Transform tr, bool isDown = false)
+    {
+        if (isDown)
+        {
+            tr.localScale = new Vector3(tr.localScale.x, -Mathf.Abs(tr.localScale.y), tr.localScale.z);
+        }
+        else
+        {
+            tr.localScale = new Vector3(tr.localScale.x, Mathf.Abs(tr.localScale.y), tr.localScale.z);
         }
     }
 }

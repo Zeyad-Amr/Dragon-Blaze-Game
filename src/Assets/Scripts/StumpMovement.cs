@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StumpMovement : MonoBehaviour
 {
-    public float speed = 0.1f;
+    public float speed = Scoring.GetLevel() * 0.1f;
     // Start is called before the first frame update
     void Start()
     {

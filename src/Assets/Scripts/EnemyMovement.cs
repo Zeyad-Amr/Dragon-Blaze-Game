@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class EnemyMovement : MonoBehaviour
 {
     // This is the speed of the player
-    public float speed = 0.1f;
+    public float speed = Scoring.GetLevel() * 0.1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,5 +18,14 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         Utils.MoveLeft(transform, speed, 5);
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        Debug.Log("PlayerMovement.OnCollisionEnter2D: " + other.gameObject.tag);
+        if (other.gameObject.CompareTag("Fireball"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
