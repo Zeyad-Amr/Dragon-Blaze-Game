@@ -21,9 +21,7 @@ https://simmer.io/@ZeyadAmr/dragon-blaze
 
 ## Demo
 
-
 https://github.com/Zeyad-Amr/Dragon-Blaze-Game/assets/68791488/fe3e827e-84b0-427a-9819-c055f9c3ac6c
-
 
 ## Screenshots
 ![Screenshot 2024-01-27 at 9 44 03 AM](https://github.com/Zeyad-Amr/Dragon-Blaze-Game/assets/68791488/fe1cabc0-a104-4dc1-bf82-805fcdb37d0f)
