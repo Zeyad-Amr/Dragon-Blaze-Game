@@ -14,12 +14,13 @@ public class Scoring : MonoBehaviour
     {
         Debug.Log("Scoring.Start");
         scoreText.text = "SCORE: " + GetScore().ToString();
-        levelText.text = "LEVEL " + GetLevel().ToString();
+        levelText.text = "LEVEL: " + GetLevel().ToString();
     }
 
     void Update()
     {
-        scoreText.text = GetScore().ToString() + " POINTS";
+        scoreText.text = "SCORE: " + GetScore().ToString();
+        levelText.text = "LEVEL: " + GetLevel().ToString();
     }
 
     public static void AddScore(int amount)
@@ -53,7 +54,7 @@ public class Scoring : MonoBehaviour
 
     public static int GetLevel()
     {
-        return score / 5 + 1;
+        return score / 10 + 1;
     }
 
 }
