@@ -1,11 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Scoring : MonoBehaviour
 {
     public static int score = 0;
     public static int highScore = 0;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI levelText;
+
+    void Start()
+    {
+        Debug.Log("Scoring.Start");
+        scoreText.text = "SCORE: " + GetScore().ToString();
+        levelText.text = "LEVEL " + GetLevel().ToString();
+    }
+
+    void Update()
+    {
+        scoreText.text = GetScore().ToString() + " POINTS";
+    }
 
     public static void AddScore(int amount)
     {
@@ -41,9 +56,4 @@ public class Scoring : MonoBehaviour
         return score / 5 + 1;
     }
 
-    public static void ResetAll()
-    {
-        ResetScore();
-        ResetHighScore();
-    }
 }

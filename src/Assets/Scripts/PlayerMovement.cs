@@ -12,8 +12,10 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 objectSize;
     public int frameCount = 0;
     private bool isFireballKeyDown = false;
-    private float debounceTime = 0.2f; // Adjust this value based on your desired debounce time
+    private readonly float debounceTime = 0.2f; // Adjust this value based on your desired debounce time
     private float lastFireballTime;
+    public Scoring scoring;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,9 +35,10 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("PlayerMovement.OnCollisionEnter2D: " + other.gameObject.tag);
         if (other.gameObject.CompareTag("Enemy"))
         {
+
             // Game Over
             Destroy(gameObject);
-            SceneManager.LoadScene("GameScene");
+            SceneManager.LoadScene("GameOverScene");
         }
     }
 
