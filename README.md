@@ -19,8 +19,6 @@ https://simmer.io/@ZeyadAmr/dragon-blaze
 - Level up to increase difficulty
 - Get hit by an enemy attack to lose
 
-## Demo
-
 ## Screenshots
 ![Screenshot 2024-01-27 at 9 44 03 AM](https://github.com/Zeyad-Amr/Dragon-Blaze-Game/assets/68791488/fe1cabc0-a104-4dc1-bf82-805fcdb37d0f)
 ![Screenshot 2024-01-27 at 9 37 08 AM](https://github.com/Zeyad-Amr/Dragon-Blaze-Game/assets/68791488/7c1386b1-05c6-4d3f-b706-9362a087d8dd)
